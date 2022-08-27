@@ -72,7 +72,7 @@ exports.handleContactPage = async (req, res, next) => {
     }
 };
 
-exports.getCaptcha = (req, res) => {
+exports.getCaptcha = (res) => {
     CAPTCHA_NUM = parseInt(Math.random() * 9000 + 1000);
     const p = new captchapng(80, 30, CAPTCHA_NUM);
     p.color(0, 0, 0, 0);
